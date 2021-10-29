@@ -1,18 +1,20 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 class Missing_Number{
   private:
   int n;
-  int *array;
+  vector <int> array;
   int sum_of_array;
   void read_number_of_data(){
     cin>>n;
   }
   void read_array_values(){
-    array=(int*)calloc(n-1,sizeof(int));
     cout<<"Enter the Numbers in the range 1 to "<<n<<endl;
+    int number;
     for(int i=0;i<(n-1);i++){
-      cin>>array[i];
+      cin>>number;
+      array.push_back(number);
     }
   }
   void sum(){
